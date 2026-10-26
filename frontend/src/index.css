@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+/* Design tokens. Light values live in @theme; both dark scopes below redefine
+   the same variables, so every utility and chart follows the active theme. */
+@theme {
+  --font-sans: system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --color-page: #f9f9f7;
+  --color-surface: #fcfcfb;
+  --color-surface-raised: #ffffff;
+  --color-ink: #0b0b0b;
+  --color-ink-secondary: #52514e;
+  --color-ink-muted: #898781;
+  --color-line: #e1e0d9;
+  --color-axis: #c3c2b7;
+
+  --color-accent: #2a78d6;
+  --color-accent-soft: #e8f1fd;
+  --color-good: #0ca30c;
+  --color-warning: #fab219;
+  --color-critical: #d03b3b;
+  --color-up: #006300;
+  --color-down: #d03b3b;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-page: #0b1120;
+    --color-surface: #141b2b;
+    --color-surface-raised: #1b2435;
+    --color-ink: #f0efec;
+    --color-ink-secondary: #c3c2b7;
+    --color-ink-muted: #8f9bb3;
+    --color-line: #263147;
+    --color-axis: #3a4660;
+
+    --color-accent: #3987e5;
+    --color-accent-soft: #16233a;
+    --color-up: #0ca30c;
+    --color-down: #e66767;
+  }
+}
+
+:root[data-theme="dark"] {
+  --color-page: #0b1120;
+  --color-surface: #141b2b;
+  --color-surface-raised: #1b2435;
+  --color-ink: #f0efec;
+  --color-ink-secondary: #c3c2b7;
+  --color-ink-muted: #8f9bb3;
+  --color-line: #263147;
+  --color-axis: #3a4660;
+
+  --color-accent: #3987e5;
+  --color-accent-soft: #16233a;
+  --color-good: #0ca30c;
+  --color-warning: #fab219;
+  --color-critical: #d03b3b;
+  --color-up: #0ca30c;
+  --color-down: #e66767;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-page);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Visible keyboard focus everywhere (accessibility requirement, SRS 14). */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Columns of figures align; standalone numbers use proportional figures. */
+table {
+  font-variant-numeric: tabular-nums;
+}
+
+.recharts-cartesian-axis-tick text {
+  font-variant-numeric: tabular-nums;
+}

@@ -1,0 +1,39 @@
+# Backend and ML dependencies, pinned to the versions the project was built and
+# tested against (NFR-08, reproducibility). Install with:
+#   python -m pip install -r requirements.txt
+
+# --- API layer ---
+fastapi==0.141.1
+uvicorn[standard]==0.52.1
+pydantic==2.13.4
+pydantic-settings==2.15.0
+email-validator==2.3.0
+
+# --- persistence ---
+SQLAlchemy==2.0.52
+alembic==1.19.1
+# PostgreSQL driver; not needed for the default SQLite demo database.
+psycopg[binary]==3.3.6
+
+# --- security ---
+PyJWT==2.15.1
+bcrypt==5.0.0
+
+# --- data and modelling ---
+pandas==3.0.5
+numpy==2.5.1
+scikit-learn==1.9.0
+statsmodels==0.15.0
+xgboost==2.0.2
+torch==2.13.0
+shap==0.54.1
+joblib==1.5.3
+
+# --- market data and reporting ---
+yfinance==1.7.0
+matplotlib==3.10.8
+
+# --- tests and tooling ---
+pytest==9.1.1
+httpx==0.28.1
+ruff==0.17.1

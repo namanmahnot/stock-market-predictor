@@ -1,0 +1,1119 @@
+{
+  "ticker": "MSFT",
+  "company_name": null,
+  "currency": "USD",
+  "data_source": "yfinance",
+  "data_retrieved_at": "2026-10-22T12:47:26.561143+00:00",
+  "data_warnings": [],
+  "reference_date": "2026-10-20",
+  "reference_price": 531.87,
+  "forecast_horizon": 5,
+  "history_days": 1095,
+  "dataset": {
+    "price_rows": 751,
+    "feature_rows": 702,
+    "n_rows": 702,
+    "n_train": 491,
+    "n_validation": 106,
+    "n_test": 105,
+    "train_start": "2024-01-03",
+    "train_end": "2025-12-16",
+    "validation_start": "2025-12-17",
+    "validation_end": "2026-05-20",
+    "test_start": "2026-05-21",
+    "test_end": "2026-10-20"
+  },
+  "best_model": "naive",
+  "selection_rule": "Lowest one-session-ahead MAE on the chronological validation window; the test window is never used for selection.",
+  "runtime_seconds": 206.643,
+  "models": [
+    {
+      "model": "naive",
+      "display_name": "Naive (last value)",
+      "family": "baseline",
+      "hyperparameters": {},
+      "training_seconds": 0.0,
+      "validation": {
+        "segment": "validation",
+        "horizon": 5,
+        "n_origins": 22,
+        "refits": 22,
+        "period_start": "2025-12-17",
+        "period_end": "2026-05-21",
+        "metrics": {
+          "n_observations": 22,
+          "mae": 5.489046963778412,
+          "rmse": 7.581932865903193,
+          "mape": 1.3111271958531894,
+          "directional_accuracy": null,
+          "r2": 0.9552134745216903
+        },
+        "metrics_by_horizon": {
+          "1": {
+            "n_observations": 22,
+            "mae": 5.489046963778412,
+            "rmse": 7.581932865903193,
+            "mape": 1.3111271958531894,
+            "directional_accuracy": null,
+            "r2": 0.9552134745216903
+          },
+          "2": {
+            "n_observations": 22,
+            "mae": 7.66787026145241,
+            "rmse": 8.848860255536001,
+            "mape": 1.8213965446593687,
+            "directional_accuracy": null,
+            "r2": 0.9390297129118362
+          },
+          "3": {
+            "n_observations": 22,
+            "mae": 10.978421297940343,
+            "rmse": 14.118264544706323,
+            "mape": 2.6643254679367274,
+            "directional_accuracy": null,
+            "r2": 0.8359343981535554
+          },
+          "4": {
+            "n_observations": 22,
+            "mae": 11.871484929865062,
+            "rmse": 14.463433449974882,
+            "mape": 2.8789494334784846,
+            "directional_accuracy": null,
+            "r2": 0.8232989045774146
+          },
+          "5": {
+            "n_observations": 22,
+            "mae": 13.976991133256389,
+            "rmse": 17.630476682134073,
+            "mape": 3.344248545146103,
+            "directional_accuracy": null,
+            "r2": 0.7168417623952854
+          }
+        },
+        "curve": []
+      },
+      "test": {
+        "segment": "test",
+        "horizon": 5,
+        "n_origins": 21,
+        "refits": 21,
+        "period_start": "2026-05-21",
+        "period_end": "2026-10-15",
+        "metrics": {
+          "n_observations": 21,
+          "mae": 5.43983968098958,
+          "rmse": 6.294937759956392,
+          "mape": 1.234110520311045,
+          "directional_accuracy": null,
+          "r2": 0.9869940839498575
+        },
+        "metrics_by_horizon": {
+          "1": {
+            "n_observations": 21,
+            "mae": 5.43983968098958,
+            "rmse": 6.294937759956392,
+            "mape": 1.234110520311045,
+            "directional_accuracy": null,
+            "r2": 0.9869940839498575
+          },
+          "2": {
+            "n_observations": 21,
+            "mae": 10.22308058965773,
+            "rmse": 15.563676176298829,
+            "mape": 2.299080327470362,
+            "directional_accuracy": null,
+            "r2": 0.9248319261422395
+          },
+          "3": {
+            "n_observations": 21,
+            "mae": 14.063119070870528,
+            "rmse": 20.077213123506926,
+            "mape": 3.17748936408257,
+            "directional_accuracy": null,
+            "r2": 0.8901114894027603
+          },
+          "4": {
+            "n_observations": 21,
+            "mae": 15.85446457635788,
+            "rmse": 24.542209683948393,
+            "mape": 3.4766140969555477,
+            "directional_accuracy": null,
+            "r2": 0.8186147317224761
+          },
+          "5": {
+            "n_observations": 20,
+            "mae": 18.15906524658202,
+            "rmse": 27.598662928350716,
+            "mape": 4.025223123460038,
+            "directional_accuracy": null,
+            "r2": 0.7673574736731203
+          }
+        },
+        "curve": []
+      },
+      "forecast": [
+        {
+          "step": 1,
+          "target_date": "2026-10-21",
+          "predicted_price": 531.87,
+          "lower_bound": 510.8772,
+          "upper_bound": 545.5381,
+          "change": 0.0,
+          "change_percent": 0.0
+        },
+        {
+          "step": 2,
+          "target_date": "2026-10-22",
+          "predicted_price": 531.87,
+          "lower_bound": 515.9488,
+          "upper_bound": 551.4142,
+          "change": 0.0,
+          "change_percent": 0.0
+        },
+        {
+          "step": 3,
+          "target_date": "2026-10-23",
+          "predicted_price": 531.87,
+          "lower_bound": 492.5183,
+          "upper_bound": 550.7659,
+          "change": 0.0,
+          "change_percent": 0.0
+        },
+        {
+          "step": 4,
+          "target_date": "2026-10-26",
+          "predicted_price": 531.87,
+          "lower_bound": 495.65,
+          "upper_bound": 553.3092,
+          "change": 0.0,
+          "change_percent": 0.0
+        },
+        {
+          "step": 5,
+          "target_date": "2026-10-27",
+          "predicted_price": 531.87,
+          "lower_bound": 487.9456,
+          "upper_bound": 571.3732,
+          "change": 0.0,
+          "change_percent": 0.0
+        }
+      ],
+      "mae_vs_naive_validation": 1.0,
+      "mae_vs_naive_test": 1.0,
+      "beats_naive_on_test": null,
+      "error": null
+    },
+    {
+      "model": "linear_regression",
+      "display_name": "Linear Regression",
+      "family": "statistical",
+      "hyperparameters": {
+        "alpha": 1.0
+      },
+      "training_seconds": 0.005,
+      "validation": {
+        "segment": "validation",
+        "horizon": 5,
+        "n_origins": 22,
+        "refits": 22,
+        "period_start": "2025-12-17",
+        "period_end": "2026-05-21",
+        "metrics": {
+          "n_observations": 22,
+          "mae": 6.049719429625733,
+          "rmse": 8.262406205723224,
+          "mape": 1.444587866787851,
+          "directional_accuracy": 0.4090909090909091,
+          "r2": 0.9468136010447076
+        },
+        "metrics_by_horizon": {
+          "1": {
+            "n_observations": 22,
+            "mae": 6.049719429625733,
+            "rmse": 8.262406205723224,
+            "mape": 1.444587866787851,
+            "directional_accuracy": 0.4090909090909091,
+            "r2": 0.9468136010447076
+          },
+          "2": {
+            "n_observations": 22,
+            "mae": 8.729815361327523,
+            "rmse": 10.068660398223617,
+            "mape": 2.0878570031376706,
+            "directional_accuracy": 0.4090909090909091,
+            "r2": 0.9210618484307918
+          },
+          "3": {
+            "n_observations": 22,
+            "mae": 12.460720897218334,
+            "rmse": 16.257864806029385,
+            "mape": 3.0526347001042162,
+            "directional_accuracy": 0.5454545454545454,
+            "r2": 0.7824385618738049
+          },
+          "4": {
+            "n_observations": 22,
+            "mae": 13.92040299519,
+            "rmse": 16.708785053222883,
+            "mape": 3.399202540250971,
+            "directional_accuracy": 0.45454545454545453,
+            "r2": 0.7641769875095261
+          },
+          "5": {
+            "n_observations": 22,
+            "mae": 15.694570213660091,
+            "rmse": 18.93685149655489,
+            "mape": 3.7836134166512316,
+            "directional_accuracy": 0.5909090909090909,
+            "r2": 0.673324444586207
+          }
+        },
+        "curve": []
+      },
+      "test": {
+        "segment": "test",
+        "horizon": 5,
+        "n_origins": 21,
+        "refits": 21,
+        "period_start": "2026-05-21",
+        "period_end": "2026-10-15",
+        "metrics": {
+          "n_observations": 21,
+          "mae": 5.1561742739123595,
+          "rmse": 6.064623840373494,
+          "mape": 1.1434881209715428,
+          "directional_accuracy": 0.5714285714285714,
+          "r2": 0.9879283731276703
+        },
+        "metrics_by_horizon": {
+          "1": {
+            "n_observations": 21,
+            "mae": 5.1561742739123595,
+            "rmse": 6.064623840373494,
+            "mape": 1.1434881209715428,
+            "directional_accuracy": 0.5714285714285714,
+            "r2": 0.9879283731276703
+          },
+          "2": {
+            "n_observations": 21,
+            "mae": 11.159057846261284,
+            "rmse": 16.359690396881813,
+            "mape": 2.4926724240197333,
+            "directional_accuracy": 0.42857142857142855,
+            "r2": 0.9169462568305677
+          },
+          "3": {
+            "n_observations": 21,
+            "mae": 16.06662347466033,
+            "rmse": 21.820772638577377,
+            "mape": 3.6061241139498357,
+            "directional_accuracy": 0.2857142857142857,
+            "r2": 0.8701967168839028
+          },
+          "4": {
+            "n_observations": 21,
+            "mae": 17.639597839115144,
+            "rmse": 27.38352820855675,
+            "mape": 3.823397985639185,
+            "directional_accuracy": 0.47619047619047616,
+            "r2": 0.7741846321353535
+          },
+          "5": {
+            "n_observations": 20,
+            "mae": 19.86146569827396,
+            "rmse": 30.46667825101663,
+            "mape": 4.388283884791687,
+            "directional_accuracy": 0.55,
+            "r2": 0.7164933612887809
+          }
+        },
+        "curve": []
+      },
+      "forecast": [
+        {
+          "step": 1,
+          "target_date": "2026-10-21",
+          "predicted_price": 532.1058,
+          "lower_bound": 509.5805,
+          "upper_bound": 544.9793,
+          "change": 0.2358,
+          "change_percent": 0.0443
+        },
+        {
+          "step": 2,
+          "target_date": "2026-10-22",
+          "predicted_price": 532.2984,
+          "lower_bound": 511.8877,
+          "upper_bound": 551.8459,
+          "change": 0.4284,
+          "change_percent": 0.0805
+        },
+        {
+          "step": 3,
+          "target_date": "2026-10-23",
+          "predicted_price": 531.7104,
+          "lower_bound": 485.547,
+          "upper_bound": 550.766,
+          "change": -0.1596,
+          "change_percent": -0.03
+        },
+        {
+          "step": 4,
+          "target_date": "2026-10-26",
+          "predicted_price": 532.2691,
+          "lower_bound": 487.437,
+          "upper_bound": 554.2561,
+          "change": 0.3991,
+          "change_percent": 0.075
+        },
+        {
+          "step": 5,
+          "target_date": "2026-10-27",
+          "predicted_price": 534.4685,
+          "lower_bound": 492.1428,
+          "upper_bound": 572.9363,
+          "change": 2.5985,
+          "change_percent": 0.4886
+        }
+      ],
+      "mae_vs_naive_validation": 1.1021438638705652,
+      "mae_vs_naive_test": 0.947854086937794,
+      "beats_naive_on_test": true,
+      "error": null
+    },
+    {
+      "model": "arima",
+      "display_name": "ARIMA",
+      "family": "statistical",
+      "hyperparameters": {
+        "order": [
+          0,
+          1,
+          0
+        ],
+        "aic": -3748.667146046236
+      },
+      "training_seconds": 1.775,
+      "validation": {
+        "segment": "validation",
+        "horizon": 5,
+        "n_origins": 22,
+        "refits": 1,
+        "period_start": "2025-12-17",
+        "period_end": "2026-05-21",
+        "metrics": {
+          "n_observations": 22,
+          "mae": 5.551320063978233,
+          "rmse": 7.603625376620672,
+          "mape": 1.326437269893091,
+          "directional_accuracy": 0.36363636363636365,
+          "r2": 0.9549568323127904
+        },
+        "metrics_by_horizon": {
+          "1": {
+            "n_observations": 22,
+            "mae": 5.551320063978233,
+            "rmse": 7.603625376620672,
+            "mape": 1.326437269893091,
+            "directional_accuracy": 0.36363636363636365,
+            "r2": 0.9549568323127904
+          },
+          "2": {
+            "n_observations": 22,
+            "mae": 7.710757200019582,
+            "rmse": 8.876895395272275,
+            "mape": 1.8330893658579488,
+            "directional_accuracy": 0.45454545454545453,
+            "r2": 0.9386427662983561
+          },
+          "3": {
+            "n_observations": 22,
+            "mae": 11.1168388180028,
+            "rmse": 14.37705456782727,
+            "mape": 2.697840224998773,
+            "directional_accuracy": 0.4090909090909091,
+            "r2": 0.829864576094895
+          },
+          "4": {
+            "n_observations": 22,
+            "mae": 12.043888053473001,
+            "rmse": 14.7772087261624,
+            "mape": 2.9241079426268755,
+            "directional_accuracy": 0.4090909090909091,
+            "r2": 0.8155488981022757
+          },
+          "5": {
+            "n_observations": 22,
+            "mae": 14.090344362824924,
+            "rmse": 17.83512856342644,
+            "mape": 3.377586813001093,
+            "directional_accuracy": 0.45454545454545453,
+            "r2": 0.7102298938821026
+          }
+        },
+        "curve": []
+      },
+      "test": {
+        "segment": "test",
+        "horizon": 5,
+        "n_origins": 21,
+        "refits": 1,
+        "period_start": "2026-05-21",
+        "period_end": "2026-10-15",
+        "metrics": {
+          "n_observations": 21,
+          "mae": 5.446555194871012,
+          "rmse": 6.290687383388512,
+          "mape": 1.235508838976106,
+          "directional_accuracy": 0.47619047619047616,
+          "r2": 0.9870116413524044
+        },
+        "metrics_by_horizon": {
+          "1": {
+            "n_observations": 21,
+            "mae": 5.446555194871012,
+            "rmse": 6.290687383388512,
+            "mape": 1.235508838976106,
+            "directional_accuracy": 0.47619047619047616,
+            "r2": 0.9870116413524044
+          },
+          "2": {
+            "n_observations": 21,
+            "mae": 10.16636354175009,
+            "rmse": 15.505548362131085,
+            "mape": 2.289046343076807,
+            "directional_accuracy": 0.6190476190476191,
+            "r2": 0.9253923588266979
+          },
+          "3": {
+            "n_observations": 21,
+            "mae": 14.037417234170496,
+            "rmse": 20.012942911073896,
+            "mape": 3.176380610567315,
+            "directional_accuracy": 0.5238095238095238,
+            "r2": 0.8908139030012702
+          },
+          "4": {
+            "n_observations": 21,
+            "mae": 15.71593886785458,
+            "rmse": 24.445921695897493,
+            "mape": 3.4487530509349136,
+            "directional_accuracy": 0.6666666666666666,
+            "r2": 0.8200352200622272
+          },
+          "5": {
+            "n_observations": 20,
+            "mae": 18.048730656570402,
+            "rmse": 27.503542238757362,
+            "mape": 4.006587205458678,
+            "directional_accuracy": 0.6,
+            "r2": 0.7689583470797534
+          }
+        },
+        "curve": []
+      },
+      "forecast": [
+        {
+          "step": 1,
+          "target_date": "2026-10-21",
+          "predicted_price": 532.1576,
+          "lower_bound": 510.8797,
+          "upper_bound": 545.5409,
+          "change": 0.2876,
+          "change_percent": 0.0541
+        },
+        {
+          "step": 2,
+          "target_date": "2026-10-22",
+          "predicted_price": 532.4453,
+          "lower_bound": 515.9541,
+          "upper_bound": 551.4198,
+          "change": 0.5753,
+          "change_percent": 0.1082
+        },
+        {
+          "step": 3,
+          "target_date": "2026-10-23",
+          "predicted_price": 532.7332,
+          "lower_bound": 492.5258,
+          "upper_bound": 550.7743,
+          "change": 0.8632,
+          "change_percent": 0.1623
+        },
+        {
+          "step": 4,
+          "target_date": "2026-10-26",
+          "predicted_price": 533.0212,
+          "lower_bound": 495.66,
+          "upper_bound": 553.3204,
+          "change": 1.1512,
+          "change_percent": 0.2165
+        },
+        {
+          "step": 5,
+          "target_date": "2026-10-27",
+          "predicted_price": 533.3094,
+          "lower_bound": 487.958,
+          "upper_bound": 571.3877,
+          "change": 1.4394,
+          "change_percent": 0.2706
+        }
+      ],
+      "mae_vs_naive_validation": 1.0113449749311227,
+      "mae_vs_naive_test": 1.0012345058448873,
+      "beats_naive_on_test": false,
+      "error": null
+    },
+    {
+      "model": "random_forest",
+      "display_name": "Random Forest",
+      "family": "machine_learning",
+      "hyperparameters": {
+        "n_estimators": 300,
+        "max_depth": 8,
+        "min_samples_leaf": 5,
+        "max_features": "sqrt"
+      },
+      "training_seconds": 0.833,
+      "validation": {
+        "segment": "validation",
+        "horizon": 5,
+        "n_origins": 22,
+        "refits": 22,
+        "period_start": "2025-12-17",
+        "period_end": "2026-05-21",
+        "metrics": {
+          "n_observations": 22,
+          "mae": 6.250867998507829,
+          "rmse": 8.3598222004079,
+          "mape": 1.4959999660100487,
+          "directional_accuracy": 0.2727272727272727,
+          "r2": 0.9455520436399824
+        },
+        "metrics_by_horizon": {
+          "1": {
+            "n_observations": 22,
+            "mae": 6.250867998507829,
+            "rmse": 8.3598222004079,
+            "mape": 1.4959999660100487,
+            "directional_accuracy": 0.2727272727272727,
+            "r2": 0.9455520436399824
+          },
+          "2": {
+            "n_observations": 22,
+            "mae": 9.272129884807226,
+            "rmse": 10.950174480919706,
+            "mape": 2.2130940632352876,
+            "directional_accuracy": 0.36363636363636365,
+            "r2": 0.9066346681086292
+          },
+          "3": {
+            "n_observations": 22,
+            "mae": 13.07485274763033,
+            "rmse": 16.97207300895811,
+            "mape": 3.1932865844302825,
+            "directional_accuracy": 0.5,
+            "r2": 0.762903748444443
+          },
+          "4": {
+            "n_observations": 22,
+            "mae": 14.243986644110993,
+            "rmse": 17.646310816662634,
+            "mape": 3.488654457602248,
+            "directional_accuracy": 0.5,
+            "r2": 0.736970604078351
+          },
+          "5": {
+            "n_observations": 22,
+            "mae": 16.648233982445735,
+            "rmse": 19.653467801741424,
+            "mape": 4.016946950391672,
+            "directional_accuracy": 0.45454545454545453,
+            "r2": 0.6481322414993457
+          }
+        },
+        "curve": []
+      },
+      "test": {
+        "segment": "test",
+        "horizon": 5,
+        "n_origins": 21,
+        "refits": 21,
+        "period_start": "2026-05-21",
+        "period_end": "2026-10-15",
+        "metrics": {
+          "n_observations": 21,
+          "mae": 5.643014533654345,
+          "rmse": 6.708173631569932,
+          "mape": 1.2791826207593322,
+          "directional_accuracy": 0.38095238095238093,
+          "r2": 0.985230470660973
+        },
+        "metrics_by_horizon": {
+          "1": {
+            "n_observations": 21,
+            "mae": 5.643014533654345,
+            "rmse": 6.708173631569932,
+            "mape": 1.2791826207593322,
+            "directional_accuracy": 0.38095238095238093,
+            "r2": 0.985230470660973
+          },
+          "2": {
+            "n_observations": 21,
+            "mae": 10.849718815839932,
+            "rmse": 16.052471587252732,
+            "mape": 2.4479922794015816,
+            "directional_accuracy": 0.5714285714285714,
+            "r2": 0.9200363021739745
+          },
+          "3": {
+            "n_observations": 21,
+            "mae": 15.18272388061135,
+            "rmse": 20.89596241146824,
+            "mape": 3.4508135374834117,
+            "directional_accuracy": 0.42857142857142855,
+            "r2": 0.8809662308466788
+          },
+          "4": {
+            "n_observations": 21,
+            "mae": 16.419123707813355,
+            "rmse": 25.83437491044757,
+            "mape": 3.6160836131829015,
+            "directional_accuracy": 0.47619047619047616,
+            "r2": 0.7990117806164632
+          },
+          "5": {
+            "n_observations": 20,
+            "mae": 19.38927906558882,
+            "rmse": 29.068896421605697,
+            "mape": 4.3323801001450875,
+            "directional_accuracy": 0.35,
+            "r2": 0.7419106347372904
+          }
+        },
+        "curve": []
+      },
+      "forecast": [
+        {
+          "step": 1,
+          "target_date": "2026-10-21",
+          "predicted_price": 532.8828,
+          "lower_bound": 510.6529,
+          "upper_bound": 546.8844,
+          "change": 1.0128,
+          "change_percent": 0.1904
+        },
+        {
+          "step": 2,
+          "target_date": "2026-10-22",
+          "predicted_price": 533.8273,
+          "lower_bound": 511.4445,
+          "upper_bound": 555.029,
+          "change": 1.9573,
+          "change_percent": 0.368
+        },
+        {
+          "step": 3,
+          "target_date": "2026-10-23",
+          "predicted_price": 534.8872,
+          "lower_bound": 489.1503,
+          "upper_bound": 555.1662,
+          "change": 3.0172,
+          "change_percent": 0.5673
+        },
+        {
+          "step": 4,
+          "target_date": "2026-10-26",
+          "predicted_price": 535.7744,
+          "lower_bound": 491.8389,
+          "upper_bound": 561.1946,
+          "change": 3.9044,
+          "change_percent": 0.7341
+        },
+        {
+          "step": 5,
+          "target_date": "2026-10-27",
+          "predicted_price": 536.3093,
+          "lower_bound": 493.9148,
+          "upper_bound": 581.1644,
+          "change": 4.4393,
+          "change_percent": 0.8347
+        }
+      ],
+      "mae_vs_naive_validation": 1.1387893089194876,
+      "mae_vs_naive_test": 1.0373494192071124,
+      "beats_naive_on_test": false,
+      "error": null
+    },
+    {
+      "model": "xgboost",
+      "display_name": "XGBoost",
+      "family": "machine_learning",
+      "hyperparameters": {
+        "n_estimators": 300,
+        "max_depth": 3,
+        "learning_rate": 0.03,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 1.0
+      },
+      "training_seconds": 2.157,
+      "validation": {
+        "segment": "validation",
+        "horizon": 5,
+        "n_origins": 22,
+        "refits": 22,
+        "period_start": "2025-12-17",
+        "period_end": "2026-05-21",
+        "metrics": {
+          "n_observations": 22,
+          "mae": 7.066315989032595,
+          "rmse": 9.265251224500956,
+          "mape": 1.69645147080683,
+          "directional_accuracy": 0.3181818181818182,
+          "r2": 0.933119131949577
+        },
+        "metrics_by_horizon": {
+          "1": {
+            "n_observations": 22,
+            "mae": 7.066315989032595,
+            "rmse": 9.265251224500956,
+            "mape": 1.69645147080683,
+            "directional_accuracy": 0.3181818181818182,
+            "r2": 0.933119131949577
+          },
+          "2": {
+            "n_observations": 22,
+            "mae": 9.742770416211892,
+            "rmse": 12.341391219162341,
+            "mape": 2.3379834368583556,
+            "directional_accuracy": 0.4090909090909091,
+            "r2": 0.8814035181679076
+          },
+          "3": {
+            "n_observations": 22,
+            "mae": 15.22609193026309,
+            "rmse": 19.323643545277925,
+            "mape": 3.732199499857769,
+            "directional_accuracy": 0.45454545454545453,
+            "r2": 0.6926501959266396
+          },
+          "4": {
+            "n_observations": 22,
+            "mae": 15.573396490040603,
+            "rmse": 20.02230276241863,
+            "mape": 3.8354773737207872,
+            "directional_accuracy": 0.45454545454545453,
+            "r2": 0.6613707358241032
+          },
+          "5": {
+            "n_observations": 22,
+            "mae": 18.16404713627031,
+            "rmse": 22.662289203317172,
+            "mape": 4.40643322496963,
+            "directional_accuracy": 0.45454545454545453,
+            "r2": 0.5321478320953164
+          }
+        },
+        "curve": []
+      },
+      "test": {
+        "segment": "test",
+        "horizon": 5,
+        "n_origins": 21,
+        "refits": 21,
+        "period_start": "2026-05-21",
+        "period_end": "2026-10-15",
+        "metrics": {
+          "n_observations": 21,
+          "mae": 5.6613212464672715,
+          "rmse": 6.957871679633551,
+          "mape": 1.256252610520338,
+          "directional_accuracy": 0.2857142857142857,
+          "r2": 0.984110475698637
+        },
+        "metrics_by_horizon": {
+          "1": {
+            "n_observations": 21,
+            "mae": 5.6613212464672715,
+            "rmse": 6.957871679633551,
+            "mape": 1.256252610520338,
+            "directional_accuracy": 0.2857142857142857,
+            "r2": 0.984110475698637
+          },
+          "2": {
+            "n_observations": 21,
+            "mae": 11.216958341462092,
+            "rmse": 16.574711254924818,
+            "mape": 2.55212333974305,
+            "directional_accuracy": 0.5238095238095238,
+            "r2": 0.9147487035284251
+          },
+          "3": {
+            "n_observations": 21,
+            "mae": 15.934174815067747,
+            "rmse": 21.55404313889358,
+            "mape": 3.628935223855366,
+            "directional_accuracy": 0.38095238095238093,
+            "r2": 0.8733506619332934
+          },
+          "4": {
+            "n_observations": 21,
+            "mae": 18.37777944630342,
+            "rmse": 27.082628541508345,
+            "mape": 4.067079699631286,
+            "directional_accuracy": 0.5238095238095238,
+            "r2": 0.7791200408753607
+          },
+          "5": {
+            "n_observations": 20,
+            "mae": 21.036200236384857,
+            "rmse": 29.915326575615516,
+            "mape": 4.732355114776663,
+            "directional_accuracy": 0.4,
+            "r2": 0.7266616822883734
+          }
+        },
+        "curve": []
+      },
+      "forecast": [
+        {
+          "step": 1,
+          "target_date": "2026-10-21",
+          "predicted_price": 531.9107,
+          "lower_bound": 506.6749,
+          "upper_bound": 546.6078,
+          "change": 0.0407,
+          "change_percent": 0.0076
+        },
+        {
+          "step": 2,
+          "target_date": "2026-10-22",
+          "predicted_price": 534.1878,
+          "lower_bound": 506.6202,
+          "upper_bound": 560.5795,
+          "change": 2.3178,
+          "change_percent": 0.4358
+        },
+        {
+          "step": 3,
+          "target_date": "2026-10-23",
+          "predicted_price": 536.9271,
+          "lower_bound": 485.1636,
+          "upper_bound": 563.5745,
+          "change": 5.0571,
+          "change_percent": 0.9508
+        },
+        {
+          "step": 4,
+          "target_date": "2026-10-26",
+          "predicted_price": 536.115,
+          "lower_bound": 488.7544,
+          "upper_bound": 568.7261,
+          "change": 4.245,
+          "change_percent": 0.7981
+        },
+        {
+          "step": 5,
+          "target_date": "2026-10-27",
+          "predicted_price": 539.3379,
+          "lower_bound": 489.5536,
+          "upper_bound": 594.3415,
+          "change": 7.4679,
+          "change_percent": 1.4041
+        }
+      ],
+      "mae_vs_naive_validation": 1.2873484296385875,
+      "mae_vs_naive_test": 1.0407147229451807,
+      "beats_naive_on_test": false,
+      "error": null
+    },
+    {
+      "model": "lstm",
+      "display_name": "LSTM",
+      "family": "deep_learning",
+      "hyperparameters": {
+        "window": 30,
+        "hidden_size": 32,
+        "num_layers": 1,
+        "dropout": 0.1,
+        "epochs": 120,
+        "batch_size": 32,
+        "learning_rate": 0.001,
+        "patience": 15,
+        "best_internal_val_loss": 2.3518869876861572
+      },
+      "training_seconds": 3.12,
+      "validation": {
+        "segment": "validation",
+        "horizon": 5,
+        "n_origins": 22,
+        "refits": 1,
+        "period_start": "2025-12-17",
+        "period_end": "2026-05-21",
+        "metrics": {
+          "n_observations": 22,
+          "mae": 6.816775920562327,
+          "rmse": 8.206394431922515,
+          "mape": 1.636237077779496,
+          "directional_accuracy": 0.5454545454545454,
+          "r2": 0.9475322698605732
+        },
+        "metrics_by_horizon": {
+          "1": {
+            "n_observations": 22,
+            "mae": 6.816775920562327,
+            "rmse": 8.206394431922515,
+            "mape": 1.636237077779496,
+            "directional_accuracy": 0.5454545454545454,
+            "r2": 0.9475322698605732
+          },
+          "2": {
+            "n_observations": 22,
+            "mae": 9.655209884909608,
+            "rmse": 11.896801574559875,
+            "mape": 2.3136958855121574,
+            "directional_accuracy": 0.5454545454545454,
+            "r2": 0.8897943138336786
+          },
+          "3": {
+            "n_observations": 22,
+            "mae": 13.96793983115672,
+            "rmse": 18.245749650749712,
+            "mape": 3.4125319519589157,
+            "directional_accuracy": 0.6363636363636364,
+            "r2": 0.7259824817991256
+          },
+          "4": {
+            "n_observations": 22,
+            "mae": 14.733381341209167,
+            "rmse": 18.62489073480907,
+            "mape": 3.606385411032881,
+            "directional_accuracy": 0.5909090909090909,
+            "r2": 0.7069890127305088
+          },
+          "5": {
+            "n_observations": 22,
+            "mae": 16.377362659775496,
+            "rmse": 20.39632730900895,
+            "mape": 3.9654750297475427,
+            "directional_accuracy": 0.5909090909090909,
+            "r2": 0.6210298212070963
+          }
+        },
+        "curve": []
+      },
+      "test": {
+        "segment": "test",
+        "horizon": 5,
+        "n_origins": 21,
+        "refits": 1,
+        "period_start": "2026-05-21",
+        "period_end": "2026-10-15",
+        "metrics": {
+          "n_observations": 21,
+          "mae": 5.507842186271724,
+          "rmse": 6.497605778449637,
+          "mape": 1.2471441539731374,
+          "directional_accuracy": 0.5238095238095238,
+          "r2": 0.986143141497391
+        },
+        "metrics_by_horizon": {
+          "1": {
+            "n_observations": 21,
+            "mae": 5.507842186271724,
+            "rmse": 6.497605778449637,
+            "mape": 1.2471441539731374,
+            "directional_accuracy": 0.5238095238095238,
+            "r2": 0.986143141497391
+          },
+          "2": {
+            "n_observations": 21,
+            "mae": 10.292757059657953,
+            "rmse": 15.6907574449745,
+            "mape": 2.318159966917811,
+            "directional_accuracy": 0.47619047619047616,
+            "r2": 0.9235993827305597
+          },
+          "3": {
+            "n_observations": 21,
+            "mae": 13.779429200016766,
+            "rmse": 20.17140526272662,
+            "mape": 3.1092178438916735,
+            "directional_accuracy": 0.6666666666666666,
+            "r2": 0.8890779880102034
+          },
+          "4": {
+            "n_observations": 21,
+            "mae": 16.295678725638975,
+            "rmse": 25.147938314556022,
+            "mape": 3.575442987345218,
+            "directional_accuracy": 0.47619047619047616,
+            "r2": 0.809550665308856
+          },
+          "5": {
+            "n_observations": 20,
+            "mae": 18.173821387996135,
+            "rmse": 27.69690807970547,
+            "mape": 4.0339525918213734,
+            "directional_accuracy": 0.7,
+            "r2": 0.765698213481482
+          }
+        },
+        "curve": []
+      },
+      "forecast": [
+        {
+          "step": 1,
+          "target_date": "2026-10-21",
+          "predicted_price": 532.8275,
+          "lower_bound": 513.6488,
+          "upper_bound": 548.4022,
+          "change": 0.9575,
+          "change_percent": 0.18
+        },
+        {
+          "step": 2,
+          "target_date": "2026-10-22",
+          "predicted_price": 533.5031,
+          "lower_bound": 505.3684,
+          "upper_bound": 558.9166,
+          "change": 1.6331,
+          "change_percent": 0.307
+        },
+        {
+          "step": 3,
+          "target_date": "2026-10-23",
+          "predicted_price": 534.1643,
+          "lower_bound": 486.5718,
+          "upper_bound": 561.3397,
+          "change": 2.2943,
+          "change_percent": 0.4314
+        },
+        {
+          "step": 4,
+          "target_date": "2026-10-26",
+          "predicted_price": 533.5017,
+          "lower_bound": 487.7921,
+          "upper_bound": 562.1181,
+          "change": 1.6317,
+          "change_percent": 0.3068
+        },
+        {
+          "step": 5,
+          "target_date": "2026-10-27",
+          "predicted_price": 535.22,
+          "lower_bound": 492.0029,
+          "upper_bound": 582.2984,
+          "change": 3.35,
+          "change_percent": 0.6298
+        }
+      ],
+      "mae_vs_naive_validation": 1.241886973375423,
+      "mae_vs_naive_test": 1.012500828934314,
+      "beats_naive_on_test": false,
+      "error": null
+    }
+  ],
+  "disclaimer": "Forecasts are statistical estimates produced from historical data for educational analysis. They can be wrong, they are not investment advice, and no future price is guaranteed."
+}

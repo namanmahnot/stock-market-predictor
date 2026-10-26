@@ -1,0 +1,25 @@
+# PostgreSQL for the deployment configuration described in the SRS.
+# The default development setup uses SQLite and needs none of this.
+#
+#   docker compose up -d db
+#   cd backend && python -m alembic upgrade head
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: stockpred-db
+    environment:
+      POSTGRES_USER: stockpred
+      POSTGRES_PASSWORD: stockpred
+      POSTGRES_DB: stockpred
+    ports:
+      - "5432:5432"
+    volumes:
+      - stockpred-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U stockpred"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  stockpred-data:
