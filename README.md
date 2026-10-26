@@ -183,7 +183,7 @@ cd backend && python -m alembic upgrade head
 
 ---
 
-## Honest notes and limitations
+## Notes and limitations
 
 - **Daily stock returns are close to unpredictable.** In the runs recorded in
   `docs/results/RESULTS.md`, most models do *not* beat the naive last-value forecast, and
